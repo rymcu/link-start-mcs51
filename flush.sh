@@ -16,6 +16,9 @@ for ARG in "$@"; do
   -b)
     bin=$4
     ;;
+  -u)
+    usb=$6
+    ;;
   esac
 done
 
@@ -35,7 +38,7 @@ fi
     stcgal -a -P stc89 -b 9600 -p /dev/tty.usbserial-14120 $(pwd)/out/$application/$bin
     echo "SUCCESS: flush over"
  else
-    stcgal -a -P stc89 -b 9600 -p $defaultUSB $(pwd)/out/$application/$bin
+    stcgal -a -P stc89 -b 9600 -p $usb $(pwd)/out/$application/$bin
     echo "SUCCESS: flush over"
  fi
 

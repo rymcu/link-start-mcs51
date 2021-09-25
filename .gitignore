@@ -1,4 +1,5 @@
 cmake-build-debug
 out
+include
 tools-sdcc
 .idea

@@ -13,6 +13,8 @@ mkdir -p $(pwd)/out/template
 source sdcc.sh
 $sdcc -c $(pwd)/src/template/main.c -o $(pwd)/out/template/main.o
 
+echo "build successful!"
+
 
 # if dependens more .h files then use -c to  generate rel and compile them at the latest
 # sdcc -c ./src/temperature/include/1602.c -o ./src/temperature/lib/ 
